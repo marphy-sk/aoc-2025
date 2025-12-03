@@ -6,7 +6,7 @@ type Range = { start: number; end: number };
 
 const parseRanges = (raw: string): Range[] =>
   raw
-    .replace(/\s+/g, "") ***REMOVED***
+    .replace(/\s+/g, "")
     .split(",")
     .filter(Boolean)
     .map((part) => {
@@ -25,7 +25,7 @@ const buildRepeatedIds = (maxR: number): number[] => {
     const maxK = Math.floor(maxD / m);
 
     for (let k = 2; k <= maxK; k++) {
-      const mult = (10 ** (m * k) - 1) / (p10m - 1); ***REMOVED***
+      const mult = (10 ** (m * k) - 1) / (p10m - 1); 
       for (let seg = minSeg; seg <= maxSeg; seg++) {
         const n = seg * mult;
         if (n > maxR) break;
@@ -100,7 +100,7 @@ const part2 = (rawInput: string) => {
   return sumInRanges(allRepeated, ranges, maxR);
 };
 
-***REMOVED***
+
 const exampleInput = `11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124`;
 
 run({

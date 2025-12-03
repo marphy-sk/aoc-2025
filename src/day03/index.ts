@@ -8,13 +8,13 @@ const part1 = (rawInput: string) => {
   let total = 0;
 
   for (const line of input) {
-    if (!line) continue; ***REMOVED***
+    if (!line) continue;
 
-    let maxPrev = -1; ***REMOVED***
-    let best = -1;    ***REMOVED***
+    let maxPrev = -1;
+    let best = -1;
 
     for (let i = 0; i < line.length; i++) {
-      const d = line.charCodeAt(i) - 48; ***REMOVED***
+      const d = line.charCodeAt(i) - 48;
 
       if (i > 0 && maxPrev >= 0) {
         const val = maxPrev * 10 + d;
@@ -34,10 +34,9 @@ const part1 = (rawInput: string) => {
   return total;
 };
 
-***REMOVED***
 const maxSubsequenceOfLength = (line: string, k: number): string => {
   const stack: string[] = [];
-  let toRemove = line.length - k; ***REMOVED***
+  let toRemove = line.length - k;
 
   for (const ch of line) {
     while (toRemove > 0 && stack.length > 0 && stack[stack.length - 1] < ch) {
@@ -47,8 +46,6 @@ const maxSubsequenceOfLength = (line: string, k: number): string => {
     stack.push(ch);
   }
 
-  ***REMOVED***
-  ***REMOVED***
   return stack.slice(0, k).join('');
 };
 
@@ -61,11 +58,10 @@ const part2 = (rawInput: string) => {
   for (const line of lines) {
     if (!line) continue;
 
-    ***REMOVED***
     const k = Math.min(K, line.length);
 
     const bestStr = maxSubsequenceOfLength(line, k);
-    const val = Number(bestStr); ***REMOVED***
+    const val = Number(bestStr);
 
     total += val;
   }

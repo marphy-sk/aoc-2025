@@ -6,9 +6,6 @@ const parseInput = (rawInput: string) =>
     .split("\n")
     .filter(Boolean);
 
-***REMOVED***
-***REMOVED***
-
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput);
 
@@ -30,12 +27,8 @@ const part1 = (rawInput: string) => {
       countZero++;
     }
   }
-
   return countZero;
 };
-
-***REMOVED***
-***REMOVED***
 
 const part2 = (rawInput: string) => {
   const input = parseInput(rawInput);
