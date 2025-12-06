@@ -1,6 +1,6 @@
 import run from "aocrunner";
 
-const parseInput = (rawInput: string) => rawInput.split('\n');
+const parseInput = (rawInput: string) => rawInput.split("\n");
 
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput);
@@ -46,7 +46,7 @@ const maxSubsequenceOfLength = (line: string, k: number): string => {
     stack.push(ch);
   }
 
-  return stack.slice(0, k).join('');
+  return stack.slice(0, k).join("");
 };
 
 const part2 = (rawInput: string) => {

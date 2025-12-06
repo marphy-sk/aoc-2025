@@ -1,10 +1,7 @@
 import run from "aocrunner";
 
 const parseInput = (rawInput: string) =>
-  rawInput
-    .trim()
-    .split("\n")
-    .filter(Boolean);
+  rawInput.trim().split("\n").filter(Boolean);
 
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput);
@@ -49,7 +46,6 @@ const part2 = (rawInput: string) => {
       }
 
       position = (position + distance) % 100;
-
     } else if (dir === "L") {
       let base = position % 100;
       if (base === 0) base = 100;
